@@ -1,0 +1,53 @@
+{
+	"private": true,
+	"name": "db-gtfs-rt-server",
+	"description": "Expose German transit data as a GTFS-RT feed.",
+	"version": "1.0.0",
+	"main": "index.js",
+	"keywords": [
+		"germany",
+		"deutsche bahn",
+		"db",
+		"gtfs-rt",
+		"gtfs realtime",
+		"transit",
+		"public transport"
+	],
+	"author": "Jannis R <mail@jannisr.de>",
+	"homepage": "https://github.com/derhuerst/db-gtfs-rt-server",
+	"repository": "derhuerst/db-gtfs-rt-server",
+	"bugs": "https://github.com/derhuerst/db-gtfs-rt-server/issues",
+	"license": "(Apache-2.0 AND Prosperity-3.0.0)",
+	"funding": [
+		{
+			"type": "github",
+			"url": "https://github.com/sponsors/derhuerst"
+		},
+		{
+			"type": "patreon",
+			"url": "https://patreon.com/derhuerst"
+		}
+	],
+	"engines": {
+		"node": ">=16"
+	},
+	"dependencies": {
+		"cached-hafas-client": "^4.0.0",
+		"hafas-client": "^5.21.1",
+		"hafas-gtfs-rt-feed": "^6.0.0",
+		"ioredis": "^4.26.0",
+		"slugg": "^1.2.1"
+	},
+	"devDependencies": {
+		"@derhuerst/technical-docs-cli": "^1.2.0",
+		"eslint": "^7.11.0"
+	},
+	"scripts": {
+		"start": "./start.sh",
+		"docs": "build-technical-doc --inline-html --syntax-stylesheet-url /syntax.css <docs/readme.md >docs/index.html && build-technical-doc --syntax-stylesheet github >docs/syntax.css",
+		"lint": "eslint .",
+		"build": "./build.sh && npm run docs",
+		"test": "echo todo; exit 1",
+		"prepublishOnly": "npm run lint && npm run build && npm test"
+	}
+}
