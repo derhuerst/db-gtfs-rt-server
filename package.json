@@ -36,7 +36,7 @@
 		"cached-hafas-client": "^4.0.0",
 		"db-clean-station-name": "github:derhuerst/db-clean-station-name#1.2.1-alpha.1",
 		"hafas-client": "^5.21.1",
-		"hafas-gtfs-rt-feed": "^6.0.0",
+		"hafas-gtfs-rt-feed": "^7.0.0",
 		"ioredis": "^4.26.0",
 		"slugg": "^1.2.1"
 	},
