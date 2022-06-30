@@ -12,6 +12,7 @@ then
 fi
 
 wget -c -N -O gtfs.zip 'https://de.data.public-transport.earth/gtfs-germany.zip'
+rm gtfs/* || true
 unzip -o -d gtfs -j gtfs.zip
 
 env | grep '^PG'
