@@ -40,7 +40,7 @@ The build script will download the latest [DELFI](https://www.delfi.de) GTFS Sta
 Specify the bounding box to be observed as JSON:
 
 ```shell
-export BBOX='{"north": 51.746, "west": 8.525, "south": 50.557, "east": 6.575}'
+export BBOX='{"north": 55.365, "west": 5.850, "south": 47.192, "east": 13.596}'
 ```
 
 `db-gtfs-rt-server` uses [`hafas-gtfs-rt-feed`](https://github.com/derhuerst/hafas-gtfs-rt-feed) underneath, which is split into three parts: polling the HAFAS endpoint (`monitor-hafas` CLI), matching realtime data (`match-with-gtfs` CLI), and serving a GTFS-RT feed (`serve-as-gtfs-rt` CLI). You can run all three at once using the `start.sh` wrapper script:

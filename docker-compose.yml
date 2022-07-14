@@ -3,7 +3,7 @@ services:
   db-gtfs-rt-server:
     build: .
     environment:
-      BBOX: '{"north": 51.746, "west": 8.525, "south": 50.557, "east": 6.575}'
+      BBOX: '{"north": 55.365, "west": 5.850, "south": 47.192, "east": 13.596}'
       NATS_STREAMING_URL: http://nats-streaming:4222/
       REDIS_URL: http://redis:6379/
       PGHOST: db
